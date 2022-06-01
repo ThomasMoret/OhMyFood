@@ -1,0 +1,26 @@
+@import "./variables";
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+.container{
+    padding: 2rem 2rem;
+}
+footer{
+    background-color: $darkgrey;
+    color: white;
+    ul{
+        padding: 0;
+    }
+    li{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+    i{
+        width: 1.2rem;
+        margin-right: 1rem;
+    }
+}
