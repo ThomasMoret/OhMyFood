@@ -1,12 +1,17 @@
 @import "./variables";
+
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
-.container{
-    padding: 2rem 2rem;
+header{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 0.3rem $darkgrey;
+    padding: 1rem;
+    position: relative;
 }
 footer{
     background-color: $darkgrey;
@@ -18,9 +23,16 @@ footer{
         list-style-type: none;
         display: flex;
         align-items: center;
+        margin-bottom: -20px;
     }
     i{
         width: 1.2rem;
         margin-right: 1rem;
+    }
+    .logo_footer{
+        font-family: 'Shrikhand',sans-serif;
+    }
+    .container{
+        padding: 2rem 2rem;
     }
 }

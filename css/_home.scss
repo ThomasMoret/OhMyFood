@@ -1,0 +1,29 @@
+@import "./variables","./mixins";
+
+.local{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey;
+    i{
+        margin-right: 1rem;
+    }
+    p{
+        font-weight: 700;
+    }
+}
+.reserv{
+    background-color: $lightgrey;
+    padding: 4rem;
+    text-align: center;
+    p{
+        font-weight: 300;
+        padding: 0rem 0rem 1.5rem 0rem;
+    }
+    h1{
+        margin-top: -2rem;
+    }
+    a{
+        @include btn-grad
+    }
+}
