@@ -1,14 +1,15 @@
 @mixin btn-grad {
-    padding: 1rem 1.2rem 1rem 1.2rem;
+    padding: 0.8rem 1.3rem 0.8rem 1.3rem;
     background-image: linear-gradient($pink, $purple);
     border-radius: 30px;
     color: white;
     font-weight: 500;
     box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    white-space: nowrap;
     &:hover {
         filter: brightness(110%);
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
         transition: 0.25s;
+        cursor: pointer;
       }
-    
 }
