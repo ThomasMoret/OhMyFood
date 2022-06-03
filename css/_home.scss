@@ -89,6 +89,7 @@
         border-radius: 1rem;
         text-decoration: none;
         color: inherit;
+        box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
     }
     span{
         position: absolute;
@@ -112,10 +113,21 @@
         *{
             margin: 0;
         }
-    }
-    .fa-heart{
-        position: absolute;
-        right: 2rem;
-        margin-top: -1.5rem;
+        .fa-heart{
+            position: absolute;
+            right: 2rem;
+            transform: translateY(-1.5rem);
+        }
+        .fa-solid::before{
+            background-image: linear-gradient($purple,$pink);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+        }
+        .fa-solid:active::before{
+            opacity: 100;
+            transition: .5s;
+        }
     }
 }
