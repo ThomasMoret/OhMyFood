@@ -85,6 +85,7 @@
         margin-top: -2rem;
     }
     a{
+        padding: 0.8rem 1.4rem;
         @include btn-grad
     }
 }
@@ -152,6 +153,13 @@
         border-radius: 1rem;
         text-decoration: none;
         box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+        position: relative;
+    }
+    .card:hover{
+        transition: 0.3s;
+        transform: scale(1.03);
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+
     }
     span{
         position: absolute;
@@ -172,6 +180,7 @@
     }
     .footer-card{
         padding: 1rem;
+        position: relative;
         *{
             margin: 0;
         }
@@ -219,5 +228,15 @@
             @include heart-trans
         }
 
+    }
+    .cards{
+        flex-direction: row !important;
+        justify-content: center;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        gap: 3rem !important;
+    }
+    .card{
+        width: 45% !important;
     }
 }
