@@ -13,3 +13,15 @@
         cursor: pointer;
       }
 }
+
+@mixin heart-trans {
+  background-image: linear-gradient($purple,$pink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: oppacity 1s ;
+      @keyframes oppacity {
+          from {opacity:0;}
+          to {opacity:1;}
+      }
+}

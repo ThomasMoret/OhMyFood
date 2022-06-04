@@ -1,4 +1,59 @@
 @import "./variables","./mixins";
+// ***************** Loader ***************** //
+.loader-box{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    animation: backcolor 2.5s ease-in-out;
+}
+@keyframes backcolor{
+    0%, 100%{
+        background-color: rgba(255, 255, 255, 0.90);
+    }
+}
+.dot{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin: .5rem;
+    animation: scaling 2s ease-in-out;
+    display: inline-block;
+}
+@keyframes scaling{
+    0%, 100%{
+      transform: scale(0.2);
+      background-color: $pink;
+    }
+    40%{
+      transform: scale(1);
+      background-color: $green;
+    }
+    50%{
+      transform: scale(1);
+      background-color: $purple;
+    }
+  }
+  .dot:nth-child(1){
+    animation-delay:0s;
+  }
+  .dot:nth-child(2){
+    animation-delay:0.2s;
+  }
+  .dot:nth-child(3){
+    animation-delay:0.4s;
+  }
+
+
+
+
+
 // *********************** Local ******************* //
 .local{
     display: flex;
@@ -128,18 +183,11 @@
             font-weight: 700;
         }
         .fa-solid:active::before{
-            background-image: linear-gradient($purple,$pink);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: oppacity 1s ;
-                @keyframes oppacity {
-                    from {opacity:0;}
-                    to {opacity:1;}
-                }
+            @include heart-trans
         }
     }
 }
+// **************** Media Queries ****************** //
 @media (min-width: 700px){
     .fonction ol{
         display: flex;
@@ -164,15 +212,7 @@
             font-weight: 700;
         }
         .fa-solid:hover::before{
-            background-image: linear-gradient($purple,$pink);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: oppacity 1s ;
-                @keyframes oppacity {
-                    from {opacity:0;}
-                    to {opacity:1;}
-                }
+            @include heart-trans
         }
 
     }
