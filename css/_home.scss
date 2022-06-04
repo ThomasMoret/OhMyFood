@@ -50,6 +50,15 @@
   .dot:nth-child(3){
     animation-delay:0.4s;
   }
+// ************************* Header ******************* //
+  #index-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.3rem $darkgrey;
+    padding: 1rem;
+    position: relative;
+}
 // *********************** Local ******************* //
 .local{
     display: flex;
@@ -142,7 +151,6 @@
         background-color: white;
         border-radius: 1rem;
         text-decoration: none;
-        color: inherit;
         box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
     }
     span{

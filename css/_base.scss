@@ -6,12 +6,8 @@ body{
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
-header{
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 0 0.3rem $darkgrey;
-    padding: 1rem;
-    position: relative;
+a:visited{
+    color: initial;
 }
 footer{
     background-color: $darkgrey;
