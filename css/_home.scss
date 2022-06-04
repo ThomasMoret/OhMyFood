@@ -1,5 +1,5 @@
 @import "./variables","./mixins";
-
+// *********************** Local ******************* //
 .local{
     display: flex;
     align-items: center;
@@ -12,6 +12,7 @@
         font-weight: 500;
     }
 }
+// ******************* Reserv ******************* //
 .reserv{
     background-color: $lightgrey;
     padding: 3.5rem;
@@ -27,6 +28,7 @@
         @include btn-grad
     }
 }
+// ***************** Fonction ******************* //
 .fonction{
     background-color: white;
     padding: 2rem 1rem 3rem 1rem;
@@ -76,9 +78,10 @@
         margin: -1rem;
     }
 }
+// ************************ Restau ******************** //
 .restau{
     background-color: $grey;
-    padding: 1rem;
+    padding: 1rem 1rem 4rem 1rem;
     .cards{
         display: flex;
         flex-direction: column;
@@ -118,16 +121,59 @@
             right: 2rem;
             transform: translateY(-1.5rem);
         }
-        .fa-solid::before{
+        .fa-solid{
+            font-weight: 400;
+        }
+        .fa-solid:active{
+            font-weight: 700;
+        }
+        .fa-solid:active::before{
             background-image: linear-gradient($purple,$pink);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            opacity: 0;
+            animation: oppacity 1s ;
+                @keyframes oppacity {
+                    from {opacity:0;}
+                    to {opacity:1;}
+                }
         }
-        .fa-solid:active::before{
-            opacity: 100;
-            transition: .5s;
+    }
+}
+@media (min-width: 700px){
+    .fonction ol{
+        display: flex;
+        gap: 4rem;
+        justify-content: center;
+        width: 100%;
+    }
+    .fonction li{
+        width:25%;
+    }
+    .fonction h1{
+        text-align: center;
+    }
+}
+@media (min-width: 1025px){
+    .restau{
+        text-align: center;
+        .cards{
+            row-gap: 3rem;
         }
+        .fa-solid:hover{
+            font-weight: 700;
+        }
+        .fa-solid:hover::before{
+            background-image: linear-gradient($purple,$pink);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: oppacity 1s ;
+                @keyframes oppacity {
+                    from {opacity:0;}
+                    to {opacity:1;}
+                }
+        }
+
     }
 }
