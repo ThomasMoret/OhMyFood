@@ -1,26 +1,30 @@
 @mixin btn-grad {
-    background-image: linear-gradient($pink, $purple);
-    border-radius: 30px;
-    color: white;
-    font-weight: 500;
-    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
-    white-space: nowrap;
-    &:hover {
-        filter: brightness(110%);
-        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
-        transition: 0.25s;
-        cursor: pointer;
-      }
+  background-image: linear-gradient($pink, $purple);
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+  white-space: nowrap;
+  &:hover {
+    filter: brightness(110%);
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
+    cursor: pointer;
+  }
 }
 
 @mixin heart-trans {
-  background-image: linear-gradient($purple,$pink);
+  background-image: linear-gradient($purple, $pink);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: oppacity 1s ;
-      @keyframes oppacity {
-          from {opacity:0;}
-          to {opacity:1;}
-      }
+  animation: oppacity 1s;
+  @keyframes oppacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }

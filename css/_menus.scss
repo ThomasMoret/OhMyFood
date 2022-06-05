@@ -1,93 +1,141 @@
 // ************** Header ************** //
-.menu-header{
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    position: relative;
+.menu-header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
 }
-.fa-arrow-left{
-    position: absolute;
-    left: 1.2rem;
-    bottom: 1.4rem;
-    font-size: 1.4rem;
+.fa-arrow-left {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.4rem;
+  font-size: 1.4rem;
 }
 // ************** Menu img *********** //
-.menu-img{
-    max-width: 100%;
-    max-height: 28rem;
-    width: 100%;
-    object-fit: cover;
+.menu-img {
+  max-width: 100%;
+  max-height: 28rem;
+  width: 100%;
+  object-fit: cover;
 }
 //  ************** Main ************* //
-.main-menu{
-    margin-top: -4rem;
-    border-radius: 2rem 2rem 0 0;
-    background-color: #f6f6f6;
-    z-index: 1;
-    position: relative;
+.main-menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
 }
 // ****** Section name menu ******* //
-.name-menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem 0 1rem;
-    h1{
-        font-family: 'Shrikhand',sans-serif;
-    }
-    .fa-solid{
-        font-weight: 400;
-    }
-    .fa-solid:active{
-        font-weight: 700;
-    }
-    .fa-solid:active::before{
-        @include heart-trans
-    }
+.name-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 0 1rem;
+  h1 {
+    font-family: "Shrikhand", sans-serif;
+  }
+  .fa-solid {
+    font-weight: 400;
+  }
+  .fa-solid:active {
+    font-weight: 700;
+  }
+  .fa-solid:active::before {
+    @include heart-trans;
+  }
 }
-.menu-list{
-    padding: 0rem 1rem 0rem 1rem
-}
-.menu-card{
-    background-color: #fff;
-    padding: 1rem;
-    display: flex;
-    border-radius: 0.75rem;
-    margin: 1rem 0;
-    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
-    overflow: hidden;
-}
-.menu-intel{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 100%;
-    *{
-        margin: 0;
-    }
-}
-.menu-price{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-right: 1.5rem;
-}
-.menu-hover{
+.menus-list {
+  position: relative;
+  .first-h2 {
+    margin-top: 1rem;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: medium;
+    position: relative;
+    margin-top: 2.5rem;
+  }
+  h2::after {
+    content: "";
+    width: 3rem;
+    height: 0.25rem;
     background-color: #99e2d0;
-    width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: -1rem -5rem -1rem 1rem;
+    position: absolute;
+    left: 0;
+    margin-top: 1.5rem;
+  }
+}
+.menu-list {
+  padding: 0rem 1rem 0rem 1rem;
+  h2 + div {
+    margin-top: 2.5rem !important;
+  }
 }
 
-.commande{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 0rem 4rem 0rem;
-    a{
-        padding: 0.8rem 3rem 0.8rem 3rem;
-        @include btn-grad
-    }
+.menu-card {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+  overflow: hidden;
+
+}
+.menu-card:hover .menu-hover{
+  margin: -1rem;
+}
+.menu-card:hover .icon-hover{
+  transform: rotate(-360deg);
+  transition-duration: .5s;
+}
+.menu-intel {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  * {
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+.menu-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 1.5rem;
+}
+.menu-hover {
+  background-color: #99e2d0;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -1rem -6rem -1rem 1rem;
+  transition-duration: 0.5s;
+}
+.icon-hover{
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.fa-check{
+  color: #99e2d0;
+}
+.commande {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0rem 4rem 0rem;
+  a {
+    padding: 0.8rem 3rem 0.8rem 3rem;
+    @include btn-grad;
+  }
 }
