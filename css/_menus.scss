@@ -35,16 +35,17 @@
   h1 {
     font-family: "Shrikhand", sans-serif;
   }
-  .fa-solid {
+  .fa-heart {
     font-weight: 400;
   }
-  .fa-solid:active {
+  .fa-heart:active {
     font-weight: 700;
   }
-  .fa-solid:active::before {
+  .fa-heart:active::before {
     @include heart-trans;
   }
 }
+// *********** Menus list ************ //
 .menus-list {
   position: relative;
   .first-h2 {
@@ -73,7 +74,6 @@
     margin-top: 2.5rem !important;
   }
 }
-
 .menu-card {
   background-color: #fff;
   padding: 1rem;
@@ -82,14 +82,16 @@
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
   overflow: hidden;
-
+  animation: item-appear 0.6s ease-in-out;
+  animation-fill-mode: both;
+  cursor: pointer;
 }
-.menu-card:hover .menu-hover{
+.menu-card:active .menu-hover {
   margin: -1rem;
 }
-.menu-card:hover .icon-hover{
+.menu-card:active .icon-hover {
   transform: rotate(-360deg);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 .menu-intel {
   white-space: nowrap;
@@ -117,7 +119,7 @@
   margin: -1rem -6rem -1rem 1rem;
   transition-duration: 0.5s;
 }
-.icon-hover{
+.icon-hover {
   height: 1.4rem;
   width: 1.4rem;
   background-color: #fff;
@@ -126,7 +128,7 @@
   justify-content: center;
   border-radius: 100px;
 }
-.fa-check{
+.fa-check {
   color: #99e2d0;
 }
 .commande {
@@ -137,5 +139,59 @@
   a {
     padding: 0.8rem 3rem 0.8rem 3rem;
     @include btn-grad;
+  }
+}
+
+@media (min-width: 1025px){
+  .name-menu{
+    justify-content: center;
+    h1{
+      padding-right: 1rem;
+    }
+  }
+  .fa-heart:hover {
+    font-weight: 700;
+  }
+  .fa-heart:hover::before {
+    @include heart-trans;
+  }
+  .menus-list{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 1rem;
+    .menu-list{
+      width: 33%;
+    }
+    h2{
+      margin-top: 2rem !important;
+    }
+    .menu-card:hover .menu-hover {
+      margin: -1rem;
+    }
+    .menu-card:hover .icon-hover {
+      transform: rotate(-360deg);
+      transition-duration: 0.5s;
+    }
+  }
+}
+
+
+
+
+@keyframes item-appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@for $i from 0 through 9 {
+  .card-#{$i} {
+    animation-delay: $i * 0.3s;
   }
 }

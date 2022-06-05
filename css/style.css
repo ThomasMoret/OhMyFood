@@ -347,13 +347,13 @@ footer .container {
 .name-menu h1 {
   font-family: "Shrikhand", sans-serif;
 }
-.name-menu .fa-solid {
+.name-menu .fa-heart {
   font-weight: 400;
 }
-.name-menu .fa-solid:active {
+.name-menu .fa-heart:active {
   font-weight: 700;
 }
-.name-menu .fa-solid:active::before {
+.name-menu .fa-heart:active::before {
   background-image: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
@@ -407,13 +407,16 @@ footer .container {
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  animation: item-appear 0.6s ease-in-out;
+  animation-fill-mode: both;
+  cursor: pointer;
 }
 
-.menu-card:hover .menu-hover {
+.menu-card:active .menu-hover {
   margin: -1rem;
 }
 
-.menu-card:hover .icon-hover {
+.menu-card:active .icon-hover {
   transform: rotate(-360deg);
   transition-duration: 0.5s;
 }
@@ -481,6 +484,104 @@ footer .container {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   transition: 0.25s;
   cursor: pointer;
+}
+
+@media (min-width: 1025px) {
+  .name-menu {
+    justify-content: center;
+  }
+  .name-menu h1 {
+    padding-right: 1rem;
+  }
+
+  .fa-heart:hover {
+    font-weight: 700;
+  }
+
+  .fa-heart:hover::before {
+    background-image: linear-gradient(#9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: oppacity 1s;
+  }
+  @keyframes oppacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .menus-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 1rem;
+  }
+  .menus-list .menu-list {
+    width: 33%;
+  }
+  .menus-list h2 {
+    margin-top: 2rem !important;
+  }
+  .menus-list .menu-card:hover .menu-hover {
+    margin: -1rem;
+  }
+  .menus-list .menu-card:hover .icon-hover {
+    transform: rotate(-360deg);
+    transition-duration: 0.5s;
+  }
+}
+@keyframes item-appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.card-0 {
+  animation-delay: 0s;
+}
+
+.card-1 {
+  animation-delay: 0.3s;
+}
+
+.card-2 {
+  animation-delay: 0.6s;
+}
+
+.card-3 {
+  animation-delay: 0.9s;
+}
+
+.card-4 {
+  animation-delay: 1.2s;
+}
+
+.card-5 {
+  animation-delay: 1.5s;
+}
+
+.card-6 {
+  animation-delay: 1.8s;
+}
+
+.card-7 {
+  animation-delay: 2.1s;
+}
+
+.card-8 {
+  animation-delay: 2.4s;
+}
+
+.card-9 {
+  animation-delay: 2.7s;
 }
 
 /*# sourceMappingURL=style.css.map */
