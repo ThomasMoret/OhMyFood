@@ -1,4 +1,4 @@
-@import "./variables";
+@import "./variables", "./mixins";
 
 body {
   margin: 0;
@@ -19,8 +19,8 @@ footer {
     list-style-type: none;
     display: flex;
     align-items: center;
-    margin-top: .5rem;
-    a{
+    margin-top: 0.5rem;
+    a {
       color: white;
       text-decoration: none;
     }

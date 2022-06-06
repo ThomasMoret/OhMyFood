@@ -1,3 +1,4 @@
+@import "./variables", "./mixins";
 // ************** Header ************** //
 .menu-header {
   display: flex;
@@ -86,6 +87,11 @@
   animation-fill-mode: both;
   cursor: pointer;
 }
+@for $i from 0 through 9 {
+  .card-#{$i} {
+    animation-delay: $i * 0.3s;
+  }
+}
 .menu-card:active .menu-hover {
   margin: -1rem;
 }
@@ -142,10 +148,10 @@
   }
 }
 
-@media (min-width: 1025px){
-  .name-menu{
+@media (min-width: 1025px) {
+  .name-menu {
     justify-content: center;
-    h1{
+    h1 {
       padding-right: 1rem;
     }
   }
@@ -155,15 +161,15 @@
   .fa-heart:hover::before {
     @include heart-trans;
   }
-  .menus-list{
+  .menus-list {
     display: flex;
     justify-content: space-around;
     width: 100%;
     gap: 1rem;
-    .menu-list{
+    .menu-list {
       width: 33%;
     }
-    h2{
+    h2 {
       margin-top: 2rem !important;
     }
     .menu-card:hover .menu-hover {
@@ -176,22 +182,3 @@
   }
 }
 
-
-
-
-@keyframes item-appear {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@for $i from 0 through 9 {
-  .card-#{$i} {
-    animation-delay: $i * 0.3s;
-  }
-}

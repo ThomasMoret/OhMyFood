@@ -1,0 +1,38 @@
+@import "./variables", "./mixins";
+
+// ********* Loader ******************* //
+@keyframes backcolor {
+    0%,
+    100% {
+      background-color: rgba(255, 255, 255, 0.9);
+      z-index: 10000;
+    }
+  }
+@keyframes scaling {
+    0%,
+    100% {
+      transform: scale(0.2);
+      background-color: $pink;
+    }
+    40% {
+      transform: scale(1);
+      background-color: $green;
+    }
+    50% {
+      transform: scale(1);
+      background-color: $purple;
+    }
+}
+// ************** Menu appear ************ //
+  @keyframes item-appear {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  
