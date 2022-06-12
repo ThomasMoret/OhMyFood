@@ -409,7 +409,7 @@ footer .container {
 .menu-list {
   padding: 0rem 1rem 0rem 1rem;
 }
-.menu-list h2 + div {
+.menu-list h2 + article {
   margin-top: 2.5rem !important;
 }
 
