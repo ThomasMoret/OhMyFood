@@ -39,10 +39,10 @@
   .fa-heart {
     font-weight: 400;
   }
-  .fa-heart:active {
+  .fa-heart:hover {
     font-weight: 700;
   }
-  .fa-heart:active::before {
+  .fa-heart:hover::before {
     @include heart-trans;
   }
 }
@@ -92,10 +92,10 @@
     animation-delay: $i * 0.3s;
   }
 }
-.menu-card:active .menu-hover {
+.menu-card:hover .menu-hover {
   margin: -1rem;
 }
-.menu-card:active .icon-hover {
+.menu-card:hover .icon-hover {
   transform: rotate(-360deg);
   transition-duration: 0.5s;
 }
@@ -181,4 +181,3 @@
     }
   }
 }
-

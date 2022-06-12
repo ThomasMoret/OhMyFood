@@ -166,10 +166,10 @@
     .fa-solid {
       font-weight: 400;
     }
-    .fa-solid:active {
+    .fa-solid:hover {
       font-weight: 700;
     }
-    .fa-solid:active::before {
+    .fa-solid:hover::before {
       @include heart-trans;
     }
   }
